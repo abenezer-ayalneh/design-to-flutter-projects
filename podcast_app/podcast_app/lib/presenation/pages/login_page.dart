@@ -3,11 +3,14 @@ import "package:flutter/material.dart";
 import 'package:flutter_screenutil/screen_util.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:podcast_app/consts/consts.dart';
+import 'package:podcast_app/presenation/pages/forgot_password_page.dart';
 import 'package:podcast_app/presenation/pages/signup_page.dart';
 import 'package:podcast_app/presenation/widgets/email_textfield.dart';
 import 'package:podcast_app/presenation/widgets/facebook_signin_button.dart';
 import 'package:podcast_app/presenation/widgets/google_signin_button.dart';
 import 'package:podcast_app/presenation/widgets/password_textfield.dart';
+import 'package:podcast_app/presenation/widgets/subtitle_text.dart';
+import 'package:podcast_app/presenation/widgets/title_text.dart';
 import 'package:podcast_app/presenation/widgets/transparent_divider.dart';
 import 'package:podcast_app/states/login_page_state.dart';
 
@@ -39,26 +42,11 @@ class _LoginPageState extends State<LoginPage> {
                     height: ScreenUtil().setHeight(68),
                   ),
                   TransparentDivider(30),
-                  Text(
-                    "Welcome Back!",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: ScreenUtil().setSp(20),
-                      fontFamily: "Circular_Std",
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w900,
-                      // fontFamily: "Georgia",
-                    ),
-                  ),
+                  TitleText("Welcome Back!"),
                   TransparentDivider(10),
-                  Text(
+                  SubtitleText(
                     "Login to continue Radio App",
-                    style: TextStyle(
-                      color: Color(0xff7B7B8B),
-                      fontSize: ScreenUtil().setSp(14),
-                      fontFamily: "Circular_Std",
-                      fontWeight: FontWeight.w400,
-                    ),
+                    fontSize: 14,
                   ),
                   TransparentDivider(27),
                   Row(
@@ -110,14 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                                   (s) => s.isChecked = !s.isChecked,
                                 );
                               },
-                              child: Text(
-                                'Remember me',
-                                style: TextStyle(
-                                  color: Color(0xff5C5E6F),
-                                  fontFamily: "Circular_Std",
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
+                              child: SubtitleText("Remember me"),
                             ),
                           ],
                         ),
@@ -128,13 +109,14 @@ class _LoginPageState extends State<LoginPage> {
                           alignment: Alignment.centerRight,
                           child: GestureDetector(
                             onTap: () {
-                              // TODO Go to forgot password page
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          ForgotPasswordPage()));
                             },
-                            child: Text(
+                            child: SubtitleText(
                               'Forgot password?',
-                              style: TextStyle(
-                                color: Color(0xff5C5E6F),
-                              ),
                             ),
                           ),
                         ),
@@ -176,14 +158,8 @@ class _LoginPageState extends State<LoginPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      SubtitleText(
                         'OR',
-                        style: TextStyle(
-                          fontSize: ScreenUtil().setSp(12),
-                          fontFamily: 'Circular_Std',
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xff7B7B8B),
-                        ),
                       ),
                     ],
                   ),

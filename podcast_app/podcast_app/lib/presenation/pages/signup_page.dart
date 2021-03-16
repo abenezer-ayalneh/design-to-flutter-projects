@@ -7,6 +7,8 @@ import 'package:podcast_app/presenation/widgets/email_textfield.dart';
 import 'package:podcast_app/presenation/widgets/facebook_signin_button.dart';
 import 'package:podcast_app/presenation/widgets/google_signin_button.dart';
 import 'package:podcast_app/presenation/widgets/password_textfield.dart';
+import 'package:podcast_app/presenation/widgets/subtitle_text.dart';
+import 'package:podcast_app/presenation/widgets/title_text.dart';
 import 'package:podcast_app/presenation/widgets/transparent_divider.dart';
 import 'package:podcast_app/presenation/widgets/username_textfield.dart';
 import 'package:podcast_app/states/signup_page_state.dart';
@@ -35,26 +37,13 @@ class _SignupPageState extends State<SignupPage> {
             child: Column(
               children: [
                 TransparentDivider(60),
-                Text(
+                TitleText(
                   "Sign Up",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: ScreenUtil().setSp(20),
-                    fontFamily: "Circular_Std",
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.w900,
-                    // fontFamily: "Georgia",
-                  ),
                 ),
                 TransparentDivider(10),
-                Text(
+                SubtitleText(
                   "Sign Up and Start Learning",
-                  style: TextStyle(
-                    color: Color(0xff7B7B8B),
-                    fontSize: ScreenUtil().setSp(14),
-                    fontFamily: "Circular_Std",
-                    fontWeight: FontWeight.w400,
-                  ),
+                  fontSize: 14,
                 ),
                 TransparentDivider(27),
                 UsernameTextfield(
@@ -97,13 +86,8 @@ class _SignupPageState extends State<SignupPage> {
                             (s) => s.isChecked = !s.isChecked,
                           );
                         },
-                        child: Text(
+                        child: SubtitleText(
                           "Yes! I want to get the most out of Ezymaster by receiving emails with exclusive deals and learning tools!",
-                          style: TextStyle(
-                            color: Color(0xff747895),
-                            fontFamily: "Circular_Std",
-                            fontWeight: FontWeight.w400,
-                          ),
                         ),
                       ),
                     )
@@ -144,14 +128,8 @@ class _SignupPageState extends State<SignupPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    SubtitleText(
                       'OR',
-                      style: TextStyle(
-                        fontSize: ScreenUtil().setSp(12),
-                        fontFamily: 'Circular_Std',
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xff7B7B8B),
-                      ),
                     ),
                   ],
                 ),
