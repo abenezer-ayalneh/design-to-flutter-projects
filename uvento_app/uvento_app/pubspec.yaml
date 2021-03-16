@@ -28,6 +28,7 @@ dependencies:
   colorful_safe_area: ^0.2.1
   cupertino_icons: ^1.0.0
   date_format: ^1.0.9
+  easy_localization: any
   flutter_screenutil: ^4.0.3+1
   flutter_svg: any
   flutter_svg_provider: ^0.1.8
@@ -53,6 +54,7 @@ flutter:
     - assets/images/crowd_photo.jpg
     - assets/images/art_photo.png
     - assets/images/concert_photo.png
+    - assets/translations/
   fonts:
     - family: Muli
       fonts:

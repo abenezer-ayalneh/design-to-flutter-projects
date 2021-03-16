@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:date_format/date_format.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -49,9 +50,9 @@ class _HomepageState extends State<Homepage> {
                           fontSize: ScreenUtil().setSp(20),
                           color: Colors.white),
                       children: [
-                        TextSpan(text: 'UVE'),
+                        TextSpan(text: tr('uve')),
                         TextSpan(
-                          text: 'NTO',
+                          text: tr('nto'),
                           style: TextStyle(
                             color: Color(0xffffa700),
                           ),
@@ -100,7 +101,7 @@ class _HomepageState extends State<Homepage> {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    'Hello, Geralt!',
+                                    tr("hello")+" "+tr("geralt"),
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
@@ -209,7 +210,7 @@ class _HomepageState extends State<Homepage> {
                 margin: EdgeInsets.symmetric(
                   horizontal: ScreenUtil().setWidth(25),
                 ),
-                child: Text('All Events',
+                child: Text(tr("all_event"),
                     style: TextStyle(
                       fontSize: ScreenUtil().setSp(20),
                       color: Colors.white,
@@ -236,21 +237,21 @@ class _HomepageState extends State<Homepage> {
                           children: [
                             EventCard(
                               icon: mic_icon,
-                              title: 'Concert',
+                              title: tr("concert"),
                             ),
                             VerticalDivider(
                               width: ScreenUtil().setWidth(25),
                             ),
                             EventCard(
                               icon: racket_icon,
-                              title: 'Sports',
+                              title: tr("sport"),
                             ),
                             VerticalDivider(
                               width: ScreenUtil().setWidth(25),
                             ),
                             EventCard(
                               icon: graduation_icon,
-                              title: 'Education',
+                              title: tr("education"),
                             ),
                           ],
                         ),
@@ -268,7 +269,7 @@ class _HomepageState extends State<Homepage> {
                 margin: EdgeInsets.symmetric(
                   horizontal: ScreenUtil().setWidth(25),
                 ),
-                child: Text('Popular Events',
+                child: Text(tr("popular_events"),
                     style: TextStyle(
                       fontSize: ScreenUtil().setSp(20),
                       color: Colors.white,
