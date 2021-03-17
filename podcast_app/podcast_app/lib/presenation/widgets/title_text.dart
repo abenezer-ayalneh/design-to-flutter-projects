@@ -8,13 +8,13 @@ class TitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       _text,
+      textAlign: TextAlign.center,
       style: TextStyle(
         color: Colors.white,
         fontSize: ScreenUtil().setSp(20),
         fontFamily: "Circular_Std",
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w900,
-        // fontFamily: "Georgia",
       ),
     );
   }

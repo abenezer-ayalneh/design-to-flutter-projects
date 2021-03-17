@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:podcast_app/presenation/pages/login_page.dart';
+import 'package:podcast_app/presenation/pages/onboarding_page.dart';
 import 'package:podcast_app/states/login_page_state.dart';
+import 'package:podcast_app/states/onboarding_page_state.dart';
 import 'package:podcast_app/states/signup_page_state.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
@@ -24,12 +26,14 @@ class MyApp extends StatelessWidget {
           inject: [
             Inject(() => LoginPageState()),
             Inject(() => SignupPageState()),
+            Inject(() => OnboardingPageState()),
           ],
           builder: (context) {
             return StateBuilder(
                 observeMany: [
                   () => login_page_state,
                   () => signup_page_state,
+                  () => onboarding_page_state,
                 ],
                 builder: (context, _) {
                   return MaterialApp(
@@ -38,7 +42,7 @@ class MyApp extends StatelessWidget {
                     theme: ThemeData(
                       visualDensity: VisualDensity.adaptivePlatformDensity,
                     ),
-                    home: LoginPage(),
+                    home: OnboardingPage(),
                   );
                 });
           });
