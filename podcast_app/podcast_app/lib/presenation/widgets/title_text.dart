@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TitleText extends StatelessWidget {
   final String _text;
-  TitleText(this._text);
+  final int fontSize;
+  TitleText(this._text, {this.fontSize});
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -11,7 +12,9 @@ class TitleText extends StatelessWidget {
       textAlign: TextAlign.center,
       style: TextStyle(
         color: Colors.white,
-        fontSize: ScreenUtil().setSp(20),
+        fontSize: fontSize == null
+            ? ScreenUtil().setSp(20)
+            : ScreenUtil().setSp(this.fontSize),
         fontFamily: "Circular_Std",
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w900,
