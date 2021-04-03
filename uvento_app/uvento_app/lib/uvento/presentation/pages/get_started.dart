@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screen_util.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -120,6 +121,9 @@ class _GetStartedState extends State<GetStarted> {
             Align(
               alignment: Alignment(-0.6, -0.02),
               child: Container(
+                margin: EdgeInsets.only(
+                  left: ScreenUtil().setHeight(20),
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -135,9 +139,9 @@ class _GetStartedState extends State<GetStarted> {
                               fontSize: ScreenUtil().setSp(30),
                               color: Colors.white),
                           children: [
-                            TextSpan(text: 'UVE'),
+                            TextSpan(text: tr("uve")),
                             TextSpan(
-                              text: 'NTO',
+                              text: tr("nto"),
                               style: TextStyle(
                                 fontSize: ScreenUtil().setSp(30),
                                 color: Color(0xffffa700),
@@ -155,7 +159,7 @@ class _GetStartedState extends State<GetStarted> {
                           Expanded(
                             child: Container(
                               child: Text(
-                                "There’s a lot happening around you! Our mission is to provide what’s happening near you!",
+                                tr("get_started_paragraph"),
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: ScreenUtil().setSp(16),
@@ -180,7 +184,7 @@ class _GetStartedState extends State<GetStarted> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Get Started',
+                              tr("get_started"),
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: ScreenUtil().setSp(18),
@@ -194,6 +198,17 @@ class _GetStartedState extends State<GetStarted> {
                           ],
                         ),
                       ),
+                    ),
+                    Divider(color: Colors.transparent),
+                    IconButton(
+                      icon: Icon(Icons.language),
+                      iconSize: ScreenUtil().setWidth(30),
+                      color: Colors.white,
+                      onPressed: () {
+                        context.locale = context.locale.languageCode == 'en'
+                            ? Locale('am')
+                            : Locale('en');
+                      },
                     ),
                   ],
                 ),
