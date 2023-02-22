@@ -5,3 +5,5 @@ My goal when I created this repository is to show people (hopefully possible hir
 This one is a 24 pages long app that resembles almost all of the required pages for a fully fleged podcast application.
 ## Uvento App
 This one is a two paged app UI that contains a landing page and one homepage. It's design resembles an application which provides nearby events.
+## Task Management App
+This one is a three paged UI that contains a simple landing page, a homepage and a tasks page. It is intended to be used for managing and following up on taks
