@@ -1,4 +1,0 @@
-#Fri Feb 24 05:33:52 EAT 2023
-base.0=/Users/abenezer.ayalneh/projects/flutter/design-to-flutter-projects/task_management_app/project/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
