@@ -60,6 +60,7 @@ class _PageDispatcherPageState extends State<PageDispatcherPage> {
         ],
       ),
       bottomNavigationBar: Container(
+        // TODO avoid using margin and look for a better way to implement it
         margin: const EdgeInsets.only(bottom: 15),
         height: 144.sp,
         width: MediaQuery.of(context).size.width,
