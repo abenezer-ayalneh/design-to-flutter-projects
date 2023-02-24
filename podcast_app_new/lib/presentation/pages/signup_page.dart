@@ -2,15 +2,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:podcast_app_new/consts/consts.dart';
-import 'package:podcast_app_new/presenation/pages/login_page.dart';
-import 'package:podcast_app_new/presenation/widgets/email_textfield.dart';
-import 'package:podcast_app_new/presenation/widgets/facebook_signin_button.dart';
-import 'package:podcast_app_new/presenation/widgets/google_signin_button.dart';
-import 'package:podcast_app_new/presenation/widgets/password_textfield.dart';
-import 'package:podcast_app_new/presenation/widgets/subtitle_text.dart';
-import 'package:podcast_app_new/presenation/widgets/title_text.dart';
-import 'package:podcast_app_new/presenation/widgets/transparent_divider.dart';
-import 'package:podcast_app_new/presenation/widgets/username_textfield.dart';
+import 'package:podcast_app_new/presentation/pages/login_page.dart';
+import 'package:podcast_app_new/presentation/widgets/email_textfield.dart';
+import 'package:podcast_app_new/presentation/widgets/facebook_signin_button.dart';
+import 'package:podcast_app_new/presentation/widgets/google_signin_button.dart';
+import 'package:podcast_app_new/presentation/widgets/password_textfield.dart';
+import 'package:podcast_app_new/presentation/widgets/subtitle_text.dart';
+import 'package:podcast_app_new/presentation/widgets/title_text.dart';
+import 'package:podcast_app_new/presentation/widgets/transparent_divider.dart';
+import 'package:podcast_app_new/presentation/widgets/username_textfield.dart';
 import 'package:podcast_app_new/states/signup_page_state.dart';
 
 class SignupPage extends StatefulWidget {

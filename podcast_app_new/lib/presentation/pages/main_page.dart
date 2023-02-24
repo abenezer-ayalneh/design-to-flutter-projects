@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:podcast_app_new/presenation/widgets/subtitle_text.dart';
-import 'package:podcast_app_new/presenation/widgets/title_text.dart';
-import 'package:podcast_app_new/presenation/widgets/transparent_divider.dart';
+import 'package:podcast_app_new/presentation/widgets/subtitle_text.dart';
+import 'package:podcast_app_new/presentation/widgets/title_text.dart';
+import 'package:podcast_app_new/presentation/widgets/transparent_divider.dart';
 
 class MainPage extends StatefulWidget {
   @override

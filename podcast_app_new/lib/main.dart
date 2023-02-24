@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:podcast_app_new/presenation/pages/login_page.dart';
+import 'package:podcast_app_new/presentation/pages/login_page.dart';
 import 'package:podcast_app_new/states/login_page_state.dart';
 import 'package:podcast_app_new/states/onboarding_page_state.dart';
 import 'package:podcast_app_new/states/signup_page_state.dart';

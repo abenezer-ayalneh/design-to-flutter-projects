@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:podcast_app_new/consts/consts.dart';
-import 'package:podcast_app_new/presenation/pages/login_page.dart';
-import 'package:podcast_app_new/presenation/widgets/email_textfield.dart';
-import 'package:podcast_app_new/presenation/widgets/subtitle_text.dart';
-import 'package:podcast_app_new/presenation/widgets/title_text.dart';
-import 'package:podcast_app_new/presenation/widgets/transparent_divider.dart';
+import 'package:podcast_app_new/presentation/pages/login_page.dart';
+import 'package:podcast_app_new/presentation/widgets/email_textfield.dart';
+import 'package:podcast_app_new/presentation/widgets/subtitle_text.dart';
+import 'package:podcast_app_new/presentation/widgets/title_text.dart';
+import 'package:podcast_app_new/presentation/widgets/transparent_divider.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   @override

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:podcast_app_new/consts/consts.dart';
-import 'package:podcast_app_new/presenation/widgets/subtitle_text.dart';
-import 'package:podcast_app_new/presenation/widgets/title_text.dart';
+import 'package:podcast_app_new/presentation/widgets/subtitle_text.dart';
+import 'package:podcast_app_new/presentation/widgets/title_text.dart';
 import 'package:podcast_app_new/states/onboarding_page_state.dart';
 
 class OnboardingPage extends StatefulWidget {
