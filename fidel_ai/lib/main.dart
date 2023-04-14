@@ -1,4 +1,4 @@
-import 'package:fidel_ai/pages/home.page.dart';
+import 'package:fidel_ai/pages/onboarding/education-or-game-onboarding.page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,8 +26,9 @@ class MyApp extends StatelessWidget {
           surface: Color(0xff2E2E2E),
           onSurface: Color(0xffffffff),
         ),
+        scaffoldBackgroundColor: const Color(0xff0D0D0D),
       ),
-      home: const HomePage(),
+      home: const EducationOrGameOnboardingPage(),
     );
   }
 }
