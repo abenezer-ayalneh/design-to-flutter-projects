@@ -1,8 +1,12 @@
+import 'package:fidel_ai/widgets/fidel-button.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:logger/logger.dart';
 
 class EducationOrGameOnboardingPage extends StatelessWidget {
-  const EducationOrGameOnboardingPage({super.key});
+  EducationOrGameOnboardingPage({super.key});
+
+  final logger = Logger();
 
   @override
   Widget build(BuildContext context) {
@@ -59,48 +63,15 @@ class EducationOrGameOnboardingPage extends StatelessWidget {
                       SizedBox(
                         height: 35.sp,
                       ),
-                      Container(
-                        height: 52.sp,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.sp),
-                        ),
-                        child: InkWell(
-                          onTap: () => print('object'),
-                          borderRadius: BorderRadius.circular(15.sp),
-                          child: Ink(
-                            decoration: BoxDecoration(
-                              color: Theme.of(context).colorScheme.primary,
-                              borderRadius: BorderRadius.circular(15.sp),
-                            ),
-                          ),
-                        ),
-                      ),
+                      FidelButton(onTap: () => logger.i('Education Button'), text: 'Education', ),
                       SizedBox(
                         height: 14.sp,
                       ),
-                      FilledButton(
-                        onPressed: () => print('button'),
-                        child: Text('Education'),
-                        style: ButtonStyle(),
-                      ),
-                      // Container(
-                      //   height: 52.sp,
-                      //   width: double.infinity,
-                      //   decoration: BoxDecoration(
-                      //     borderRadius: BorderRadius.circular(15.sp),
-                      //   ),
-                      //   child: InkWell(
-                      //     onTap: () => print('object'),
-                      //     borderRadius: BorderRadius.circular(15.sp),
-                      //     child: Ink(
-                      //       decoration: BoxDecoration(
-                      //         color: Theme.of(context).colorScheme.secondary,
-                      //         borderRadius: BorderRadius.circular(15.sp),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
+                      FidelButton(
+                        onTap: () => logger.i('Game Button'),
+                        text: 'Game',
+                        buttonType: FidelButtonType.secondary,
+                      )
                     ],
                   ),
                 ),

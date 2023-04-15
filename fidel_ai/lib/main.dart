@@ -34,22 +34,21 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
               ),
-              bodyLarge:  TextStyle(
+              bodyLarge: TextStyle(
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
               ),
-              bodyMedium:  TextStyle(
+              bodyMedium: TextStyle(
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
               ),
-              bodySmall:  TextStyle(
+              bodySmall: TextStyle(
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w100,
                 color: Colors.white,
               ),
-
             ),
             colorScheme: const ColorScheme(
               brightness: Brightness.dark,
@@ -69,7 +68,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const EducationOrGameOnboardingPage(),
+      child:  EducationOrGameOnboardingPage(),
     );
   }
 }
