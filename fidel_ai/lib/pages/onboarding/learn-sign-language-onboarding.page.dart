@@ -5,9 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logger/logger.dart';
 
-class EducationOrGameOnboardingPage extends StatelessWidget {
-  EducationOrGameOnboardingPage({super.key});
-
+class LearnSignLanguageOnboardingPage extends StatelessWidget {
+  LearnSignLanguageOnboardingPage({Key? key}) : super(key: key);
   final logger = Logger();
 
   @override
@@ -16,29 +15,30 @@ class EducationOrGameOnboardingPage extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Center(
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30.sp),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 30.sp),
+              child: Center(
+                child: SingleChildScrollView(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        width: 428.sp,
-                        height: 379.sp,
+                        width: 397.sp,
+                        height: 320.sp,
+                        margin: EdgeInsets.only(left: 31.sp),
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                'assets/images/kid_picture_heart_hand.png'),
+                                'assets/images/kid_picture_phone.png'),
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: 52.sp,
+                        height: 62.sp,
                       ),
                       Text(
-                        'What do\nyou Like to do',
+                        'Learn\nSign Language',
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium
@@ -60,21 +60,26 @@ class EducationOrGameOnboardingPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 35.sp,
+                        height: 13.sp,
                       ),
                       FidelButton(
-                        onTap: () => Navigator.pushNamed(
-                          context,
-                          LEARN_SIGN_LANGUAGE_ONBOARDING_PAGE,
-                        ),
-                        text: 'Education',
+                        onTap: () => Navigator.pushNamed(context, SELECT_PROFILE_PICTURE_ONBOARDING_PAGE),
+                        text: 'Get started',
+                        buttonType: FidelButtonType.secondary,
                       ),
                       SizedBox(
                         height: 14.sp,
                       ),
                       FidelButton(
-                        onTap: () => logger.i('Game Button'),
-                        text: 'Game',
+                        onTap: () => logger.i('Learn as a guest Button'),
+                        text: 'Learn as a guest',
+                      ),
+                      SizedBox(
+                        height: 14.sp,
+                      ),
+                      FidelButton(
+                        onTap: () => logger.i('Login with google Button'),
+                        text: 'Login with google',
                         buttonType: FidelButtonType.secondary,
                       )
                     ],

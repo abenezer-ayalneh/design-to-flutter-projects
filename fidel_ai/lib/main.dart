@@ -1,4 +1,8 @@
+import 'package:fidel_ai/pages/home.page.dart';
 import 'package:fidel_ai/pages/onboarding/education-or-game-onboarding.page.dart';
+import 'package:fidel_ai/pages/onboarding/learn-sign-language-onboarding.page.dart';
+import 'package:fidel_ai/pages/onboarding/select-profile-picture-onboarding.page.dart';
+import 'package:fidel_ai/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -66,6 +70,12 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: const Color(0xff0D0D0D),
           ),
           home: child,
+          routes: {
+            HOME_ROUTE: (context) => const HomePage(),
+            EDUCATION_OR_GAME_ONBOARDING_PAGE: (context) => EducationOrGameOnboardingPage(),
+            LEARN_SIGN_LANGUAGE_ONBOARDING_PAGE: (context) => LearnSignLanguageOnboardingPage(),
+            SELECT_PROFILE_PICTURE_ONBOARDING_PAGE: (context) => SelectProfilePictureOnboardingPage(),
+          },
         );
       },
       child:  EducationOrGameOnboardingPage(),

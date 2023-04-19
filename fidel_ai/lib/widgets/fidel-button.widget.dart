@@ -20,6 +20,7 @@ class FidelButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color buttonColor = Theme.of(context).colorScheme.primary;
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(15.sp),
@@ -38,7 +39,7 @@ class FidelButton extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             text,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: buttonType == FidelButtonType.primary ? Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.black) : Theme.of(context).textTheme.bodyLarge,
             textAlign: TextAlign.center,
           ),
         ),
